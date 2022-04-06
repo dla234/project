@@ -1,0 +1,70 @@
+###크리에이터 생성
+POST http://localhost:8080/creator/creator21
+Content-Type: application/json
+
+{
+  "creatorID": "creator21",
+  "name": "test"
+}
+
+
+###크리에이터 정보 조회
+GET http://localhost:8080/creator/creator21
+
+
+
+### 채널 등록
+POST http://localhost:8080/channel/channel22
+Content-Type: application/json
+
+{
+  "channelID": "channel22",
+  "name": "test_channel"
+}
+
+
+###채널 정보 조회
+GET http://localhost:8080/channel/channel22
+
+
+
+
+###채널 수익 등록
+POST http://localhost:8080/sales/channel22
+Content-Type: application/json
+
+{
+  "salas_profit": 5000,
+  "register_date":"2022-02-02T10:11:22"
+}
+
+
+
+###채널 수익 계약 등록
+POST http://localhost:8080/contract/contract22
+Content-Type: application/json
+
+{
+  "contractID":"contract22",
+  "channelID":"channel22",
+  "creatorID":"creator21",
+  "profitrate": 50.0
+
+}
+
+
+###채널 수익 계약 조회
+GET http://localhost:8080/contract/contract22
+
+
+###채널 수익 조회
+GET http://localhost:8080/sales/channel22/list
+
+
+
+###채널 수익 조회
+GET http://localhost:8080/sales/creator21/map
+
+
+###전체 매출 수익 조회
+GET http://localhost:8080/sales/total
